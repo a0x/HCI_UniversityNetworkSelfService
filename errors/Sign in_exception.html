@@ -44,29 +44,29 @@
 	        <h2 class="form-signin-heading" align="center">刘朋&nbsp你好</h2>
 	        <div class="control-group error">
 			  <div class="controls">
-			    <input id="inputError" type="password" class="input-block-level" placeholder="密码错误，请重新输入">
+			    <input id="inputError" name="password" type="password" class="input-block-level" placeholder="密码错误，请重新输入">
 			  </div>
 			</div>
 	        <table class="table">
 	        	<tr>
-	        		<td><button class="btn btn-large btn-block" type="button">7</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">8</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">9</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">7</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">8</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">9</button></td>
 	        	</tr>
 	        	<tr>
-	        		<td><button class="btn btn-large btn-block" type="button">4</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">5</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">6</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">4</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">5</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">6</button></td>
 	        	</tr>
 	        	<tr>
-	        		<td><button class="btn btn-large btn-block" type="button">1</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">2</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">3</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">1</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">2</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">3</button></td>
 	        	</tr>
 	        	<tr>
-	        		<td><button class="btn btn-large btn-block" type="button">X</button></td>
-	        		<td><button class="btn btn-large btn-block" type="button">0</button></td>
-	        		<td><button class="btn btn-warning btn-large btn-block" type="button">←</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">X</button></td>
+	        		<td><button class="btn btn-large btn-block" type="button" onclick="inputText()">0</button></td>
+	        		<td><button class="btn btn-warning btn-large btn-block" type="button" onclick="descText()">←</button></td>
 	        	</tr>
 	        </table>
 	        <div class="row-fluid">
@@ -75,6 +75,15 @@
 	        </div>
 	      </form>
     	</div>
+    	<script type="text/javascript">
+    		function inputText() {
+    			document.getElementsByName("password")[0].value += "0";
+    		}
+    		function descText() {
+    			var str = document.getElementsByName("password")[0].value;
+    			document.getElementsByName("password")[0].value = str.substring(0, str.length - 1);
+    		}
+    	</script>
     	<script src="../js/jquery.min.js"></script>
 		<script src="../js/bootstrap.min.js"></script>
     </body>
