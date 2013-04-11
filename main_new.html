@@ -30,13 +30,6 @@
 	      .form-signin .form-signin-heading{
 	        margin-bottom: 10px;
 	      }
-	      .form-signin input[type="text"],
-	      .form-signin input[type="password"] {
-	        font-size: 16px;
-	        height: auto;
-	        margin-bottom: 15px;
-	        padding: 7px 9px;
-	      }
       	</style>
     </head>
     <body>
@@ -45,16 +38,16 @@
 	        <h2 class="form-signin-heading" align="center">请选择开户类型</h2>
 	        <div class="btn-group" data-toggle="buttons-radio">
 		        <div class="row">
-		        	<h3 class="span3">包月账户（未开通）</h3>
-		        	<button type="button" class="btn btn-large span6" onclick="location.href='protocol_baoyue.html'">541012010418B</button>
+		        	<h3 class="span3">包月账户541012010418B（未开通）</h3>
+		        	<button type="button" class="btn btn-large span6" onclick="location.href='protocol_baoyue.html'">开户/缴费</button>
 		        </div>
 		        <div class="row">
-		        	<h3 class="span3">包时账户（未开通）</h3>
-		        	<button type="button" class="btn btn-large span6" onclick="location.href='protocol_baoshi.html'">541012010418T</button>
+		        	<h3 class="span3">包时账户541012010418T（未开通）</h3>
+		        	<button type="button" class="btn btn-large span6" onclick="location.href='protocol_baoshi.html'">开户/缴费/复通</button>
 		        </div>
 		        <hr>
 		        <div class="row">
-		        	<button class="btn btn-large btn-danger span6" type="submit">退出</button>
+		        	<button class="btn btn-large btn-danger span6" type="button" onclick="self.close()">退出</button>
 		        </div>
 	        </div>
 	      </form>
